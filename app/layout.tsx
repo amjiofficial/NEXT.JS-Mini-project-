@@ -23,47 +23,68 @@ export default function RootLayout({ children }: RootLayoutProps) {
           flexDirection: "column",
           minHeight: "100vh",
           background: "#f0f4f8",
+          color: "#111827",
         }}
       >
         {/* Header */}
         <header
+          style={{
+            width: "100%",
+            padding: "1rem 2rem",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            background: "#0f172a",
+            color: "#fff",
+            boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+          }}
+        >
+          {/* Website Logo / Name */}
+          <Link href="/">
+            <div
               style={{
-                width: "100%",
-                padding: "1rem 0",
-                display: "flex",
-                justifyContent: "center",
-                gap: "1rem",
-                background: "#0f172a",
+                fontSize: "1.5rem",
+                fontWeight: 700,
+                letterSpacing: "2px",
+                color: "#ffffff", // logo font color white
+                cursor: "pointer",
               }}
             >
-              <Link href="/">
-                <button className="nav-btn">Home</button>
-              </Link>
+              MyWebsite
+            </div>
+          </Link>
 
-              <Link href="/about">
-                <button className="nav-btn">About</button>
-              </Link>
+          {/* Navigation Buttons */}
+          <nav style={{ display: "flex", gap: "1rem" }}>
+            <Link href="/">
+              <button className="nav-btn">Home</button>
+            </Link>
 
-              <Link href="/contact">
-                <button className="nav-btn">Contact</button>
-              </Link>
+            <Link href="/about">
+              <button className="nav-btn">About</button>
+            </Link>
 
-              <Link href="/signup">
-                <button className="nav-btn">Sign Up</button>
-              </Link>
-            </header>
+            <Link href="/contact">
+              <button className="nav-btn">Contact</button>
+            </Link>
+
+            <Link href="/signup">
+              <button className="nav-btn">Sign Up</button>
+            </Link>
+          </nav>
+        </header>
 
         {/* Main content */}
         <main
-            style={{
-                flex: 1,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                padding: "2rem",
-              }}
-            >
-              {children}
+          style={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "2rem",
+          }}
+        >
+          {children}
         </main>
 
         {/* Footer */}
