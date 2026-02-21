@@ -124,4 +124,8 @@ Dark mode
 
 Deployment to Vercel
 
+<<<<<<< HEAD
 Tailwind CSS integration
+=======
+Tailwind CSS integration
+>>>>>>> cb5d04ca0a7a4511f865552b35e35efbc0025ed5

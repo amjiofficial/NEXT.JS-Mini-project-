@@ -27,31 +27,31 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         {/* Header */}
         <header
-          style={{
-            background: "#ffffff",
-            padding: "1rem 2rem",
-            boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
-          }}
-        >
-          <div
-            className="container"
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "100%",
-              maxWidth: "1200px",
-            }}
-          >
-            <h1 style={{ color: "#111827" }}>My Website</h1>
-            <nav>
-              <Link href="/">Home</Link>
-              <Link href="/about">About</Link>
-              <Link href="/contact">Contact</Link>
-              <Link href="/signup">Sign Up</Link>
-            </nav>
-          </div>
-        </header>
+              style={{
+                width: "100%",
+                padding: "1rem 0",
+                display: "flex",
+                justifyContent: "center",
+                gap: "1rem",
+                background: "#0f172a",
+              }}
+            >
+              <Link href="/">
+                <button className="nav-btn">Home</button>
+              </Link>
+
+              <Link href="/about">
+                <button className="nav-btn">About</button>
+              </Link>
+
+              <Link href="/contact">
+                <button className="nav-btn">Contact</button>
+              </Link>
+
+              <Link href="/signup">
+                <button className="nav-btn">Sign Up</button>
+              </Link>
+            </header>
 
         {/* Main content */}
         <main
